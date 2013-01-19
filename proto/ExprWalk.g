@@ -8,7 +8,7 @@ options {
 }
 
 @header {
-package org.elex.antlr.java;
+package org.chw.proto;
 }
 
 @rulecatch
@@ -32,15 +32,11 @@ importInfo  : Quotation {System.out.println("import  "+$Quotation.text);} ;
 messageInfo : ^(Identity{System.out.println("\nmessage:"+$Identity);} messageFieldInfo*);
 
 messageFieldInfo : 
-                  ^(name=Identity Attribute ClassPath index=Number DefaultValue? Comment*)
-                  {System.out.println($Attribute+" "+$name+":"+$ClassPath+"="+$index+($DefaultValue!=null ? " ["+$DefaultValue+"]":"")+"  "+($Comment!=null ? $Comment:""));}
+                  ^(name=Identity Attribute Type index=Number DefaultValue? Comment*)
                   ;
 
 enumInfo : ^(Identity enumFieldInfo*);
 
 enumFieldInfo : ^(Identity Number Comment*);
-       
-classPart   : Package | Option | Import | Message | Enum | Default | Attribute | Type | Identity;
 
-classPath : ^(ClassPath classPart (Dot classPart)*);
 

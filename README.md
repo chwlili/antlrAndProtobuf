@@ -1,4 +1,0 @@
-antlrAndProtobuf
-================
-
-Antlr for protobuf

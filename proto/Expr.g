@@ -13,16 +13,15 @@ tokens
   ImportList;
   MessageList;
   EnumList;
-  ClassPath;
   DefaultValue;
 }
 
 @parser::header {
-package org.elex.antlr.java;
+package org.chw.proto;
 }
 
 @lexer::header {
-package org.elex.antlr.java;
+package org.chw.proto;
 }
 
 @rulecatch
@@ -39,16 +38,30 @@ proto :
       ^(Proto ^(PackageList packageDef*) ^(OptionList optionDef*) ^(ImportList importDef*) ^(MessageList messageDef*) ^(EnumList enumDef*))
       ;
 
+classRef[int type]
+    :
+    (id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Attribute | id=Type | id=Identity | id=ClassPath)
+    {$id.setType(type);}
+    ;
+
+idDef[int type]
+    :
+    (id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Attribute | id=Type | id=Identity)
+    {$id.setType(type);}
+    ;
+    
+
+    
 packageDef  :
-            Package va=classpath Semicolon?
-            ->
-            ^(ClassPath[$va.start,$va.text])
+            Package val=classRef[ClassPath] Semicolon?
+            -> 
+            ^($val)
             ;
 
 optionDef   : 
-            Option Identity Equals Quotation Semicolon? 
+            Option val=idDef[Identity] Equals Quotation Semicolon? 
             ->
-            ^(Identity Quotation)
+            ^($val Quotation)
             ;
             
 importDef   : 
@@ -58,39 +71,36 @@ importDef   :
             ;
 
 messageDef  : 
-            Message Identity BraceL messageFieldDef* BraceR 
+            Message val=idDef[Identity] BraceL messageFieldDef* BraceR
             ->
-            ^(Identity messageFieldDef*)
-            ;
-            
+            ^($val messageFieldDef*)
+            ; 
+             
 messageFieldDef : 
-                Attribute val=classpath Identity Equals Number defaultDef? Semicolon? Comment* 
+                Attribute type=classRef[Type] id=idDef[Identity] Equals Number defaultDef? Semicolon? Comment*
                 ->
-                ^(Identity Attribute ClassPath[$val.start,$val.text] Number defaultDef? Comment*)
+                ^($id Attribute $type Number defaultDef? Comment*)
                 ;
                 
 defaultDef  : 
-            BracketL Default Equals (val=Number|val=Identity) BracketR 
+            BracketL Default Equals id=idDef[Identity] BracketR 
             ->
-            ^(DefaultValue[$val,$val.text])
+            ^($id)
             ;
             
-classPart   : Package | Option | Import | Message | Enum | Default | Attribute | Type | Identity;
-
-classpath   : classPart (Dot classPart)*;
-            
 enumDef :
-        Enum Identity BraceL enumFieldDef* BraceR 
+        Enum id=idDef[Identity] BraceL enumFieldDef* BraceR
         ->
-        ^(Identity enumFieldDef*)
+        ^($id enumFieldDef*)
         ;
         
 enumFieldDef: 
-            Identity Equals Number Semicolon? Comment* 
+            id=idDef[Identity] Equals Number Semicolon? Comment* 
             ->
-            ^(Identity Number )
+            ^($id Number Comment*)
             ; 
 
+//(id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Attribute | id=Type | id=Identity | id=ClassPath)
 
 Package : 'package';
 Option  : 'option';
@@ -103,6 +113,7 @@ Attribute : 'optional' | 'repeated' | 'required';
 Type      : 'int32' | 'sint32' | 'uint32' | 'int64' | 'sint64' | 'uint64';
 Number    : '0'..'9' | '1'..'9' '0'..'9'+;
 Identity  : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
+ClassPath : Identity (Dot Identity)*;
 Quotation : '"' .* '"';
 Comment   : '//' ~('\r'|'\n')*;
 Semicolon : ';';
