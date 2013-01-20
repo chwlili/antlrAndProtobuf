@@ -1,4 +1,4 @@
-// $ANTLR 3.4 G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g 2013-01-19 13:33:08
+// $ANTLR 3.4 E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g 2013-01-20 08:58:03
 
 package org.chw.proto;
 
@@ -14,7 +14,7 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class ExprParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "Attribute", "BraceL", "BraceR", "BracketL", "BracketR", "ClassPath", "Comment", "Default", "DefaultValue", "Dot", "Enum", "EnumList", "Equals", "Identity", "Import", "ImportList", "Message", "MessageList", "Number", "Option", "OptionList", "Other", "Package", "PackageList", "Proto", "Quotation", "Semicolon", "Space", "Type"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "Attribute", "BraceL", "BraceR", "BracketL", "BracketR", "ClassPath", "Comment", "Default", "DefaultValue", "Dot", "Enum", "EnumList", "Equals", "Identity", "Import", "ImportList", "Index", "Message", "MessageList", "Name", "Number", "Option", "OptionList", "Other", "Package", "PackageList", "Proto", "Quotation", "Semicolon", "Space", "Type"
     };
 
     public static final int EOF=-1;
@@ -34,19 +34,21 @@ public class ExprParser extends Parser {
     public static final int Identity=17;
     public static final int Import=18;
     public static final int ImportList=19;
-    public static final int Message=20;
-    public static final int MessageList=21;
-    public static final int Number=22;
-    public static final int Option=23;
-    public static final int OptionList=24;
-    public static final int Other=25;
-    public static final int Package=26;
-    public static final int PackageList=27;
-    public static final int Proto=28;
-    public static final int Quotation=29;
-    public static final int Semicolon=30;
-    public static final int Space=31;
-    public static final int Type=32;
+    public static final int Index=20;
+    public static final int Message=21;
+    public static final int MessageList=22;
+    public static final int Name=23;
+    public static final int Number=24;
+    public static final int Option=25;
+    public static final int OptionList=26;
+    public static final int Other=27;
+    public static final int Package=28;
+    public static final int PackageList=29;
+    public static final int Proto=30;
+    public static final int Quotation=31;
+    public static final int Semicolon=32;
+    public static final int Space=33;
+    public static final int Type=34;
 
     // delegates
     public Parser[] getDelegates() {
@@ -72,7 +74,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return ExprParser.tokenNames; }
-    public String getGrammarFileName() { return "G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g"; }
+    public String getGrammarFileName() { return "E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g"; }
 
 
     public static class proto_return extends ParserRuleReturnScope {
@@ -82,7 +84,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "proto"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:35:1: proto : ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )* -> ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:40:1: proto : ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )* -> ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) ) ;
     public final ExprParser.proto_return proto() throws RecognitionException {
         ExprParser.proto_return retval = new ExprParser.proto_return();
         retval.start = input.LT(1);
@@ -110,10 +112,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_importDef=new RewriteRuleSubtreeStream(adaptor,"rule importDef");
         RewriteRuleSubtreeStream stream_messageDef=new RewriteRuleSubtreeStream(adaptor,"rule messageDef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:35:7: ( ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )* -> ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:7: ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:40:7: ( ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )* -> ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:7: ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )*
             {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:7: ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:7: ( packageDef | optionDef | importDef | messageDef | enumDef | Comment )*
             loop1:
             do {
                 int alt1=7;
@@ -153,9 +155,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:8: packageDef
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:8: packageDef
             	    {
-            	    pushFollow(FOLLOW_packageDef_in_proto98);
+            	    pushFollow(FOLLOW_packageDef_in_proto121);
             	    packageDef1=packageDef();
 
             	    state._fsp--;
@@ -165,9 +167,9 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 2 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:19: optionDef
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:19: optionDef
             	    {
-            	    pushFollow(FOLLOW_optionDef_in_proto100);
+            	    pushFollow(FOLLOW_optionDef_in_proto123);
             	    optionDef2=optionDef();
 
             	    state._fsp--;
@@ -177,9 +179,9 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 3 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:29: importDef
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:29: importDef
             	    {
-            	    pushFollow(FOLLOW_importDef_in_proto102);
+            	    pushFollow(FOLLOW_importDef_in_proto125);
             	    importDef3=importDef();
 
             	    state._fsp--;
@@ -189,9 +191,9 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 4 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:39: messageDef
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:39: messageDef
             	    {
-            	    pushFollow(FOLLOW_messageDef_in_proto104);
+            	    pushFollow(FOLLOW_messageDef_in_proto127);
             	    messageDef4=messageDef();
 
             	    state._fsp--;
@@ -201,9 +203,9 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 5 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:50: enumDef
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:50: enumDef
             	    {
-            	    pushFollow(FOLLOW_enumDef_in_proto106);
+            	    pushFollow(FOLLOW_enumDef_in_proto129);
             	    enumDef5=enumDef();
 
             	    state._fsp--;
@@ -213,9 +215,9 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 6 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:36:58: Comment
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:41:58: Comment
             	    {
-            	    Comment6=(Token)match(input,Comment,FOLLOW_Comment_in_proto108);  
+            	    Comment6=(Token)match(input,Comment,FOLLOW_Comment_in_proto131);  
             	    stream_Comment.add(Comment6);
 
 
@@ -229,7 +231,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: optionDef, enumDef, messageDef, importDef, packageDef
+            // elements: optionDef, importDef, enumDef, packageDef, messageDef
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -239,23 +241,23 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 37:7: -> ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) )
+            // 42:7: -> ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) )
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:7: ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:7: ^( Proto ^( PackageList ( packageDef )* ) ^( OptionList ( optionDef )* ) ^( ImportList ( importDef )* ) ^( MessageList ( messageDef )* ) ^( EnumList ( enumDef )* ) )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(Proto, "Proto")
                 , root_1);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:15: ^( PackageList ( packageDef )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:15: ^( PackageList ( packageDef )* )
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(PackageList, "PackageList")
                 , root_2);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:29: ( packageDef )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:29: ( packageDef )*
                 while ( stream_packageDef.hasNext() ) {
                     adaptor.addChild(root_2, stream_packageDef.nextTree());
 
@@ -265,14 +267,14 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:42: ^( OptionList ( optionDef )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:42: ^( OptionList ( optionDef )* )
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(OptionList, "OptionList")
                 , root_2);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:55: ( optionDef )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:55: ( optionDef )*
                 while ( stream_optionDef.hasNext() ) {
                     adaptor.addChild(root_2, stream_optionDef.nextTree());
 
@@ -282,14 +284,14 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:67: ^( ImportList ( importDef )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:67: ^( ImportList ( importDef )* )
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(ImportList, "ImportList")
                 , root_2);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:80: ( importDef )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:80: ( importDef )*
                 while ( stream_importDef.hasNext() ) {
                     adaptor.addChild(root_2, stream_importDef.nextTree());
 
@@ -299,14 +301,14 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:92: ^( MessageList ( messageDef )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:92: ^( MessageList ( messageDef )* )
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(MessageList, "MessageList")
                 , root_2);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:106: ( messageDef )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:106: ( messageDef )*
                 while ( stream_messageDef.hasNext() ) {
                     adaptor.addChild(root_2, stream_messageDef.nextTree());
 
@@ -316,14 +318,14 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:119: ^( EnumList ( enumDef )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:119: ^( EnumList ( enumDef )* )
                 {
                 Object root_2 = (Object)adaptor.nil();
                 root_2 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(EnumList, "EnumList")
                 , root_2);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:38:130: ( enumDef )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:43:130: ( enumDef )*
                 while ( stream_enumDef.hasNext() ) {
                     adaptor.addChild(root_2, stream_enumDef.nextTree());
 
@@ -371,7 +373,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "classRef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:41:1: classRef[int type] : (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity |id= ClassPath ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:46:1: classRef[int type] : (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity |id= ClassPath ) ;
     public final ExprParser.classRef_return classRef(int type) throws RecognitionException {
         ExprParser.classRef_return retval = new ExprParser.classRef_return();
         retval.start = input.LT(1);
@@ -384,14 +386,14 @@ public TreeAdaptor getTreeAdaptor() {
         Object id_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:42:5: ( (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity |id= ClassPath ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity |id= ClassPath )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:47:5: ( (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity |id= ClassPath ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity |id= ClassPath )
             {
             root_0 = (Object)adaptor.nil();
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity |id= ClassPath )
-            int alt2=10;
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity |id= ClassPath )
+            int alt2=8;
             switch ( input.LA(1) ) {
             case Package:
                 {
@@ -423,24 +425,14 @@ public TreeAdaptor getTreeAdaptor() {
                 alt2=6;
                 }
                 break;
-            case Attribute:
+            case Identity:
                 {
                 alt2=7;
                 }
                 break;
-            case Type:
-                {
-                alt2=8;
-                }
-                break;
-            case Identity:
-                {
-                alt2=9;
-                }
-                break;
             case ClassPath:
                 {
-                alt2=10;
+                alt2=8;
                 }
                 break;
             default:
@@ -453,9 +445,9 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt2) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:6: id= Package
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:6: id= Package
                     {
-                    id=(Token)match(input,Package,FOLLOW_Package_in_classRef191); 
+                    id=(Token)match(input,Package,FOLLOW_Package_in_classRef214); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -465,9 +457,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:19: id= Option
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:19: id= Option
                     {
-                    id=(Token)match(input,Option,FOLLOW_Option_in_classRef197); 
+                    id=(Token)match(input,Option,FOLLOW_Option_in_classRef220); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -477,9 +469,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:31: id= Import
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:31: id= Import
                     {
-                    id=(Token)match(input,Import,FOLLOW_Import_in_classRef203); 
+                    id=(Token)match(input,Import,FOLLOW_Import_in_classRef226); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -489,9 +481,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:43: id= Message
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:43: id= Message
                     {
-                    id=(Token)match(input,Message,FOLLOW_Message_in_classRef209); 
+                    id=(Token)match(input,Message,FOLLOW_Message_in_classRef232); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -501,9 +493,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:56: id= Enum
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:56: id= Enum
                     {
-                    id=(Token)match(input,Enum,FOLLOW_Enum_in_classRef215); 
+                    id=(Token)match(input,Enum,FOLLOW_Enum_in_classRef238); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -513,9 +505,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:66: id= Default
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:66: id= Default
                     {
-                    id=(Token)match(input,Default,FOLLOW_Default_in_classRef221); 
+                    id=(Token)match(input,Default,FOLLOW_Default_in_classRef244); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -525,9 +517,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:79: id= Attribute
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:79: id= Identity
                     {
-                    id=(Token)match(input,Attribute,FOLLOW_Attribute_in_classRef227); 
+                    id=(Token)match(input,Identity,FOLLOW_Identity_in_classRef250); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -537,33 +529,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 8 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:94: id= Type
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:48:93: id= ClassPath
                     {
-                    id=(Token)match(input,Type,FOLLOW_Type_in_classRef233); 
-                    id_tree = 
-                    (Object)adaptor.create(id)
-                    ;
-                    adaptor.addChild(root_0, id_tree);
-
-
-                    }
-                    break;
-                case 9 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:104: id= Identity
-                    {
-                    id=(Token)match(input,Identity,FOLLOW_Identity_in_classRef239); 
-                    id_tree = 
-                    (Object)adaptor.create(id)
-                    ;
-                    adaptor.addChild(root_0, id_tree);
-
-
-                    }
-                    break;
-                case 10 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:43:118: id= ClassPath
-                    {
-                    id=(Token)match(input,ClassPath,FOLLOW_ClassPath_in_classRef245); 
+                    id=(Token)match(input,ClassPath,FOLLOW_ClassPath_in_classRef256); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -608,7 +576,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "idDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:47:1: idDef[int type] : (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:52:1: idDef[int type] : (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity ) ;
     public final ExprParser.idDef_return idDef(int type) throws RecognitionException {
         ExprParser.idDef_return retval = new ExprParser.idDef_return();
         retval.start = input.LT(1);
@@ -621,14 +589,14 @@ public TreeAdaptor getTreeAdaptor() {
         Object id_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:48:5: ( (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:53:5: ( (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity )
             {
             root_0 = (Object)adaptor.nil();
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Attribute |id= Type |id= Identity )
-            int alt3=9;
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:5: (id= Package |id= Option |id= Import |id= Message |id= Enum |id= Default |id= Identity )
+            int alt3=7;
             switch ( input.LA(1) ) {
             case Package:
                 {
@@ -660,19 +628,9 @@ public TreeAdaptor getTreeAdaptor() {
                 alt3=6;
                 }
                 break;
-            case Attribute:
-                {
-                alt3=7;
-                }
-                break;
-            case Type:
-                {
-                alt3=8;
-                }
-                break;
             case Identity:
                 {
-                alt3=9;
+                alt3=7;
                 }
                 break;
             default:
@@ -685,9 +643,9 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt3) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:6: id= Package
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:6: id= Package
                     {
-                    id=(Token)match(input,Package,FOLLOW_Package_in_idDef277); 
+                    id=(Token)match(input,Package,FOLLOW_Package_in_idDef288); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -697,9 +655,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:19: id= Option
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:19: id= Option
                     {
-                    id=(Token)match(input,Option,FOLLOW_Option_in_idDef283); 
+                    id=(Token)match(input,Option,FOLLOW_Option_in_idDef294); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -709,9 +667,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:31: id= Import
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:31: id= Import
                     {
-                    id=(Token)match(input,Import,FOLLOW_Import_in_idDef289); 
+                    id=(Token)match(input,Import,FOLLOW_Import_in_idDef300); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -721,9 +679,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:43: id= Message
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:43: id= Message
                     {
-                    id=(Token)match(input,Message,FOLLOW_Message_in_idDef295); 
+                    id=(Token)match(input,Message,FOLLOW_Message_in_idDef306); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -733,9 +691,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:56: id= Enum
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:56: id= Enum
                     {
-                    id=(Token)match(input,Enum,FOLLOW_Enum_in_idDef301); 
+                    id=(Token)match(input,Enum,FOLLOW_Enum_in_idDef312); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -745,9 +703,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:66: id= Default
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:66: id= Default
                     {
-                    id=(Token)match(input,Default,FOLLOW_Default_in_idDef307); 
+                    id=(Token)match(input,Default,FOLLOW_Default_in_idDef318); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -757,33 +715,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:79: id= Attribute
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:54:79: id= Identity
                     {
-                    id=(Token)match(input,Attribute,FOLLOW_Attribute_in_idDef313); 
-                    id_tree = 
-                    (Object)adaptor.create(id)
-                    ;
-                    adaptor.addChild(root_0, id_tree);
-
-
-                    }
-                    break;
-                case 8 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:94: id= Type
-                    {
-                    id=(Token)match(input,Type,FOLLOW_Type_in_idDef319); 
-                    id_tree = 
-                    (Object)adaptor.create(id)
-                    ;
-                    adaptor.addChild(root_0, id_tree);
-
-
-                    }
-                    break;
-                case 9 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:49:104: id= Identity
-                    {
-                    id=(Token)match(input,Identity,FOLLOW_Identity_in_idDef325); 
+                    id=(Token)match(input,Identity,FOLLOW_Identity_in_idDef324); 
                     id_tree = 
                     (Object)adaptor.create(id)
                     ;
@@ -828,7 +762,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "packageDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:55:1: packageDef : Package val= classRef[ClassPath] ( Semicolon )? -> ^( $val) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:60:1: packageDef : Package val= classRef[ClassPath] ( Semicolon )? -> ^( $val) ;
     public final ExprParser.packageDef_return packageDef() throws RecognitionException {
         ExprParser.packageDef_return retval = new ExprParser.packageDef_return();
         retval.start = input.LT(1);
@@ -847,21 +781,21 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_Package=new RewriteRuleTokenStream(adaptor,"token Package");
         RewriteRuleSubtreeStream stream_classRef=new RewriteRuleSubtreeStream(adaptor,"rule classRef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:55:13: ( Package val= classRef[ClassPath] ( Semicolon )? -> ^( $val) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:56:13: Package val= classRef[ClassPath] ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:60:13: ( Package val= classRef[ClassPath] ( Semicolon )? -> ^( $val) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:61:13: Package val= classRef[ClassPath] ( Semicolon )?
             {
-            Package7=(Token)match(input,Package,FOLLOW_Package_in_packageDef368);  
+            Package7=(Token)match(input,Package,FOLLOW_Package_in_packageDef367);  
             stream_Package.add(Package7);
 
 
-            pushFollow(FOLLOW_classRef_in_packageDef372);
+            pushFollow(FOLLOW_classRef_in_packageDef371);
             val=classRef(ClassPath);
 
             state._fsp--;
 
             stream_classRef.add(val.getTree());
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:56:45: ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:61:45: ( Semicolon )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -870,9 +804,9 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt4) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:56:45: Semicolon
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:61:45: Semicolon
                     {
-                    Semicolon8=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_packageDef375);  
+                    Semicolon8=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_packageDef374);  
                     stream_Semicolon.add(Semicolon8);
 
 
@@ -894,9 +828,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 57:13: -> ^( $val)
+            // 62:13: -> ^( $val)
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:58:13: ^( $val)
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:63:13: ^( $val)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_val.nextNode(), root_1);
@@ -939,7 +873,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:61:1: optionDef : Option val= idDef[Identity] Equals Quotation ( Semicolon )? -> ^( $val Quotation ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:66:1: optionDef : Option val= idDef[Identity] Equals Quotation ( Semicolon )? -> ^( $val Quotation ) ;
     public final ExprParser.optionDef_return optionDef() throws RecognitionException {
         ExprParser.optionDef_return retval = new ExprParser.optionDef_return();
         retval.start = input.LT(1);
@@ -964,29 +898,29 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_Equals=new RewriteRuleTokenStream(adaptor,"token Equals");
         RewriteRuleSubtreeStream stream_idDef=new RewriteRuleSubtreeStream(adaptor,"rule idDef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:61:13: ( Option val= idDef[Identity] Equals Quotation ( Semicolon )? -> ^( $val Quotation ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:62:13: Option val= idDef[Identity] Equals Quotation ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:66:13: ( Option val= idDef[Identity] Equals Quotation ( Semicolon )? -> ^( $val Quotation ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:67:13: Option val= idDef[Identity] Equals Quotation ( Semicolon )?
             {
-            Option9=(Token)match(input,Option,FOLLOW_Option_in_optionDef444);  
+            Option9=(Token)match(input,Option,FOLLOW_Option_in_optionDef443);  
             stream_Option.add(Option9);
 
 
-            pushFollow(FOLLOW_idDef_in_optionDef448);
+            pushFollow(FOLLOW_idDef_in_optionDef447);
             val=idDef(Identity);
 
             state._fsp--;
 
             stream_idDef.add(val.getTree());
 
-            Equals10=(Token)match(input,Equals,FOLLOW_Equals_in_optionDef451);  
+            Equals10=(Token)match(input,Equals,FOLLOW_Equals_in_optionDef450);  
             stream_Equals.add(Equals10);
 
 
-            Quotation11=(Token)match(input,Quotation,FOLLOW_Quotation_in_optionDef453);  
+            Quotation11=(Token)match(input,Quotation,FOLLOW_Quotation_in_optionDef452);  
             stream_Quotation.add(Quotation11);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:62:57: ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:67:57: ( Semicolon )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -995,9 +929,9 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt5) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:62:57: Semicolon
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:67:57: Semicolon
                     {
-                    Semicolon12=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_optionDef455);  
+                    Semicolon12=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_optionDef454);  
                     stream_Semicolon.add(Semicolon12);
 
 
@@ -1008,7 +942,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: val, Quotation
+            // elements: Quotation, val
             // token labels: 
             // rule labels: val, retval
             // token list labels: 
@@ -1019,9 +953,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 63:13: -> ^( $val Quotation )
+            // 68:13: -> ^( $val Quotation )
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:64:13: ^( $val Quotation )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:69:13: ^( $val Quotation )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_val.nextNode(), root_1);
@@ -1068,7 +1002,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "importDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:67:1: importDef : Import Quotation ( Semicolon )? -> ^( Quotation ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:72:1: importDef : Import Quotation ( Semicolon )? -> ^( Quotation ) ;
     public final ExprParser.importDef_return importDef() throws RecognitionException {
         ExprParser.importDef_return retval = new ExprParser.importDef_return();
         retval.start = input.LT(1);
@@ -1088,18 +1022,18 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_Semicolon=new RewriteRuleTokenStream(adaptor,"token Semicolon");
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:67:13: ( Import Quotation ( Semicolon )? -> ^( Quotation ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:68:13: Import Quotation ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:72:13: ( Import Quotation ( Semicolon )? -> ^( Quotation ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:73:13: Import Quotation ( Semicolon )?
             {
-            Import13=(Token)match(input,Import,FOLLOW_Import_in_importDef538);  
+            Import13=(Token)match(input,Import,FOLLOW_Import_in_importDef537);  
             stream_Import.add(Import13);
 
 
-            Quotation14=(Token)match(input,Quotation,FOLLOW_Quotation_in_importDef540);  
+            Quotation14=(Token)match(input,Quotation,FOLLOW_Quotation_in_importDef539);  
             stream_Quotation.add(Quotation14);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:68:30: ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:73:30: ( Semicolon )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1108,9 +1042,9 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt6) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:68:30: Semicolon
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:73:30: Semicolon
                     {
-                    Semicolon15=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_importDef542);  
+                    Semicolon15=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_importDef541);  
                     stream_Semicolon.add(Semicolon15);
 
 
@@ -1131,9 +1065,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 69:13: -> ^( Quotation )
+            // 74:13: -> ^( Quotation )
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:70:13: ^( Quotation )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:75:13: ^( Quotation )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -1178,7 +1112,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "messageDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:73:1: messageDef : Message val= idDef[Identity] BraceL ( messageFieldDef )* BraceR -> ^( $val ( messageFieldDef )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:78:1: messageDef : Message val= idDef[Identity] BraceL ( messageFieldDef )* BraceR -> ^( $val ( messageFieldDef )* ) ;
     public final ExprParser.messageDef_return messageDef() throws RecognitionException {
         ExprParser.messageDef_return retval = new ExprParser.messageDef_return();
         retval.start = input.LT(1);
@@ -1203,40 +1137,40 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_messageFieldDef=new RewriteRuleSubtreeStream(adaptor,"rule messageFieldDef");
         RewriteRuleSubtreeStream stream_idDef=new RewriteRuleSubtreeStream(adaptor,"rule idDef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:73:13: ( Message val= idDef[Identity] BraceL ( messageFieldDef )* BraceR -> ^( $val ( messageFieldDef )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:74:13: Message val= idDef[Identity] BraceL ( messageFieldDef )* BraceR
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:78:13: ( Message val= idDef[Identity] BraceL ( messageFieldDef )* BraceR -> ^( $val ( messageFieldDef )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:79:13: Message val= idDef[Identity] BraceL ( messageFieldDef )* BraceR
             {
-            Message16=(Token)match(input,Message,FOLLOW_Message_in_messageDef609);  
+            Message16=(Token)match(input,Message,FOLLOW_Message_in_messageDef608);  
             stream_Message.add(Message16);
 
 
-            pushFollow(FOLLOW_idDef_in_messageDef613);
+            pushFollow(FOLLOW_idDef_in_messageDef612);
             val=idDef(Identity);
 
             state._fsp--;
 
             stream_idDef.add(val.getTree());
 
-            BraceL17=(Token)match(input,BraceL,FOLLOW_BraceL_in_messageDef616);  
+            BraceL17=(Token)match(input,BraceL,FOLLOW_BraceL_in_messageDef615);  
             stream_BraceL.add(BraceL17);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:74:48: ( messageFieldDef )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:79:48: ( messageFieldDef )*
             loop7:
             do {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==Attribute) ) {
+                if ( (LA7_0==Default||LA7_0==Enum||(LA7_0 >= Identity && LA7_0 <= Import)||LA7_0==Message||LA7_0==Option||LA7_0==Package) ) {
                     alt7=1;
                 }
 
 
                 switch (alt7) {
             	case 1 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:74:48: messageFieldDef
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:79:48: messageFieldDef
             	    {
-            	    pushFollow(FOLLOW_messageFieldDef_in_messageDef618);
+            	    pushFollow(FOLLOW_messageFieldDef_in_messageDef617);
             	    messageFieldDef18=messageFieldDef();
 
             	    state._fsp--;
@@ -1252,7 +1186,7 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            BraceR19=(Token)match(input,BraceR,FOLLOW_BraceR_in_messageDef621);  
+            BraceR19=(Token)match(input,BraceR,FOLLOW_BraceR_in_messageDef620);  
             stream_BraceR.add(BraceR19);
 
 
@@ -1268,14 +1202,14 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 75:13: -> ^( $val ( messageFieldDef )* )
+            // 80:13: -> ^( $val ( messageFieldDef )* )
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:76:13: ^( $val ( messageFieldDef )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:81:13: ^( $val ( messageFieldDef )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_val.nextNode(), root_1);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:76:20: ( messageFieldDef )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:81:20: ( messageFieldDef )*
                 while ( stream_messageFieldDef.hasNext() ) {
                     adaptor.addChild(root_1, stream_messageFieldDef.nextTree());
 
@@ -1320,7 +1254,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "messageFieldDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:79:1: messageFieldDef : Attribute type= classRef[Type] id= idDef[Identity] Equals Number ( defaultDef )? ( Semicolon )? ( Comment )* -> ^( $id Attribute $type Number ( defaultDef )? ( Comment )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:84:1: messageFieldDef : att= idDef[Attribute] type= classRef[Type] name= idDef[Name] Equals index= Number ( defaultDef )? ( Semicolon )? ( Comment )* -> ^( $name $att $type $index ( defaultDef )? ( Comment )* ) ;
     public final ExprParser.messageFieldDef_return messageFieldDef() throws RecognitionException {
         ExprParser.messageFieldDef_return retval = new ExprParser.messageFieldDef_return();
         retval.start = input.LT(1);
@@ -1328,62 +1262,64 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token Attribute20=null;
-        Token Equals21=null;
-        Token Number22=null;
-        Token Semicolon24=null;
-        Token Comment25=null;
+        Token index=null;
+        Token Equals20=null;
+        Token Semicolon22=null;
+        Token Comment23=null;
+        ExprParser.idDef_return att =null;
+
         ExprParser.classRef_return type =null;
 
-        ExprParser.idDef_return id =null;
+        ExprParser.idDef_return name =null;
 
-        ExprParser.defaultDef_return defaultDef23 =null;
+        ExprParser.defaultDef_return defaultDef21 =null;
 
 
-        Object Attribute20_tree=null;
-        Object Equals21_tree=null;
-        Object Number22_tree=null;
-        Object Semicolon24_tree=null;
-        Object Comment25_tree=null;
+        Object index_tree=null;
+        Object Equals20_tree=null;
+        Object Semicolon22_tree=null;
+        Object Comment23_tree=null;
         RewriteRuleTokenStream stream_Number=new RewriteRuleTokenStream(adaptor,"token Number");
         RewriteRuleTokenStream stream_Semicolon=new RewriteRuleTokenStream(adaptor,"token Semicolon");
         RewriteRuleTokenStream stream_Comment=new RewriteRuleTokenStream(adaptor,"token Comment");
-        RewriteRuleTokenStream stream_Attribute=new RewriteRuleTokenStream(adaptor,"token Attribute");
         RewriteRuleTokenStream stream_Equals=new RewriteRuleTokenStream(adaptor,"token Equals");
         RewriteRuleSubtreeStream stream_defaultDef=new RewriteRuleSubtreeStream(adaptor,"rule defaultDef");
         RewriteRuleSubtreeStream stream_idDef=new RewriteRuleSubtreeStream(adaptor,"rule idDef");
         RewriteRuleSubtreeStream stream_classRef=new RewriteRuleSubtreeStream(adaptor,"rule classRef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:79:17: ( Attribute type= classRef[Type] id= idDef[Identity] Equals Number ( defaultDef )? ( Semicolon )? ( Comment )* -> ^( $id Attribute $type Number ( defaultDef )? ( Comment )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:80:17: Attribute type= classRef[Type] id= idDef[Identity] Equals Number ( defaultDef )? ( Semicolon )? ( Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:84:17: (att= idDef[Attribute] type= classRef[Type] name= idDef[Name] Equals index= Number ( defaultDef )? ( Semicolon )? ( Comment )* -> ^( $name $att $type $index ( defaultDef )? ( Comment )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:85:17: att= idDef[Attribute] type= classRef[Type] name= idDef[Name] Equals index= Number ( defaultDef )? ( Semicolon )? ( Comment )*
             {
-            Attribute20=(Token)match(input,Attribute,FOLLOW_Attribute_in_messageFieldDef707);  
-            stream_Attribute.add(Attribute20);
+            pushFollow(FOLLOW_idDef_in_messageFieldDef708);
+            att=idDef(Attribute);
 
+            state._fsp--;
 
-            pushFollow(FOLLOW_classRef_in_messageFieldDef711);
+            stream_idDef.add(att.getTree());
+
+            pushFollow(FOLLOW_classRef_in_messageFieldDef713);
             type=classRef(Type);
 
             state._fsp--;
 
             stream_classRef.add(type.getTree());
 
-            pushFollow(FOLLOW_idDef_in_messageFieldDef716);
-            id=idDef(Identity);
+            pushFollow(FOLLOW_idDef_in_messageFieldDef718);
+            name=idDef(Name);
 
             state._fsp--;
 
-            stream_idDef.add(id.getTree());
+            stream_idDef.add(name.getTree());
 
-            Equals21=(Token)match(input,Equals,FOLLOW_Equals_in_messageFieldDef719);  
-            stream_Equals.add(Equals21);
-
-
-            Number22=(Token)match(input,Number,FOLLOW_Number_in_messageFieldDef721);  
-            stream_Number.add(Number22);
+            Equals20=(Token)match(input,Equals,FOLLOW_Equals_in_messageFieldDef721);  
+            stream_Equals.add(Equals20);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:80:80: ( defaultDef )?
+            index=(Token)match(input,Number,FOLLOW_Number_in_messageFieldDef725);  
+            stream_Number.add(index);
+
+
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:85:95: ( defaultDef )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1392,14 +1328,14 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt8) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:80:80: defaultDef
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:85:95: defaultDef
                     {
-                    pushFollow(FOLLOW_defaultDef_in_messageFieldDef723);
-                    defaultDef23=defaultDef();
+                    pushFollow(FOLLOW_defaultDef_in_messageFieldDef727);
+                    defaultDef21=defaultDef();
 
                     state._fsp--;
 
-                    stream_defaultDef.add(defaultDef23.getTree());
+                    stream_defaultDef.add(defaultDef21.getTree());
 
                     }
                     break;
@@ -1407,7 +1343,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:80:92: ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:85:107: ( Semicolon )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1416,10 +1352,10 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt9) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:80:92: Semicolon
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:85:107: Semicolon
                     {
-                    Semicolon24=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_messageFieldDef726);  
-                    stream_Semicolon.add(Semicolon24);
+                    Semicolon22=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_messageFieldDef730);  
+                    stream_Semicolon.add(Semicolon22);
 
 
                     }
@@ -1428,7 +1364,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:80:103: ( Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:85:118: ( Comment )*
             loop10:
             do {
                 int alt10=2;
@@ -1441,10 +1377,10 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt10) {
             	case 1 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:80:103: Comment
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:85:118: Comment
             	    {
-            	    Comment25=(Token)match(input,Comment,FOLLOW_Comment_in_messageFieldDef729);  
-            	    stream_Comment.add(Comment25);
+            	    Comment23=(Token)match(input,Comment,FOLLOW_Comment_in_messageFieldDef733);  
+            	    stream_Comment.add(Comment23);
 
 
             	    }
@@ -1456,44 +1392,44 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
+            index.setType(Index);
+
             // AST REWRITE
-            // elements: id, defaultDef, Attribute, type, Comment, Number
-            // token labels: 
-            // rule labels: id, retval, type
+            // elements: att, defaultDef, index, type, Comment, name
+            // token labels: index
+            // rule labels: retval, name, att, type
             // token list labels: 
             // rule list labels: 
             // wildcard labels: 
             retval.tree = root_0;
-            RewriteRuleSubtreeStream stream_id=new RewriteRuleSubtreeStream(adaptor,"rule id",id!=null?id.tree:null);
+            RewriteRuleTokenStream stream_index=new RewriteRuleTokenStream(adaptor,"token index",index);
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+            RewriteRuleSubtreeStream stream_name=new RewriteRuleSubtreeStream(adaptor,"rule name",name!=null?name.tree:null);
+            RewriteRuleSubtreeStream stream_att=new RewriteRuleSubtreeStream(adaptor,"rule att",att!=null?att.tree:null);
             RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type",type!=null?type.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 81:17: -> ^( $id Attribute $type Number ( defaultDef )? ( Comment )* )
+            // 87:17: -> ^( $name $att $type $index ( defaultDef )? ( Comment )* )
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:82:17: ^( $id Attribute $type Number ( defaultDef )? ( Comment )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:88:17: ^( $name $att $type $index ( defaultDef )? ( Comment )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
-                root_1 = (Object)adaptor.becomeRoot(stream_id.nextNode(), root_1);
+                root_1 = (Object)adaptor.becomeRoot(stream_name.nextNode(), root_1);
 
-                adaptor.addChild(root_1, 
-                stream_Attribute.nextNode()
-                );
+                adaptor.addChild(root_1, stream_att.nextTree());
 
                 adaptor.addChild(root_1, stream_type.nextTree());
 
-                adaptor.addChild(root_1, 
-                stream_Number.nextNode()
-                );
+                adaptor.addChild(root_1, stream_index.nextNode());
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:82:46: ( defaultDef )?
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:88:43: ( defaultDef )?
                 if ( stream_defaultDef.hasNext() ) {
                     adaptor.addChild(root_1, stream_defaultDef.nextTree());
 
                 }
                 stream_defaultDef.reset();
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:82:58: ( Comment )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:88:55: ( Comment )*
                 while ( stream_Comment.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_Comment.nextNode()
@@ -1540,7 +1476,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "defaultDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:85:1: defaultDef : BracketL Default Equals id= idDef[Identity] BracketR -> ^( $id) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:91:1: defaultDef : BracketL Default Equals id= idDef[Identity] BracketR -> ^( $id) ;
     public final ExprParser.defaultDef_return defaultDef() throws RecognitionException {
         ExprParser.defaultDef_return retval = new ExprParser.defaultDef_return();
         retval.start = input.LT(1);
@@ -1548,47 +1484,47 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token BracketL26=null;
-        Token Default27=null;
-        Token Equals28=null;
-        Token BracketR29=null;
+        Token BracketL24=null;
+        Token Default25=null;
+        Token Equals26=null;
+        Token BracketR27=null;
         ExprParser.idDef_return id =null;
 
 
-        Object BracketL26_tree=null;
-        Object Default27_tree=null;
-        Object Equals28_tree=null;
-        Object BracketR29_tree=null;
+        Object BracketL24_tree=null;
+        Object Default25_tree=null;
+        Object Equals26_tree=null;
+        Object BracketR27_tree=null;
         RewriteRuleTokenStream stream_Default=new RewriteRuleTokenStream(adaptor,"token Default");
         RewriteRuleTokenStream stream_BracketL=new RewriteRuleTokenStream(adaptor,"token BracketL");
         RewriteRuleTokenStream stream_BracketR=new RewriteRuleTokenStream(adaptor,"token BracketR");
         RewriteRuleTokenStream stream_Equals=new RewriteRuleTokenStream(adaptor,"token Equals");
         RewriteRuleSubtreeStream stream_idDef=new RewriteRuleSubtreeStream(adaptor,"rule idDef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:85:13: ( BracketL Default Equals id= idDef[Identity] BracketR -> ^( $id) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:86:13: BracketL Default Equals id= idDef[Identity] BracketR
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:91:13: ( BracketL Default Equals id= idDef[Identity] BracketR -> ^( $id) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:92:13: BracketL Default Equals id= idDef[Identity] BracketR
             {
-            BracketL26=(Token)match(input,BracketL,FOLLOW_BracketL_in_defaultDef837);  
-            stream_BracketL.add(BracketL26);
+            BracketL24=(Token)match(input,BracketL,FOLLOW_BracketL_in_defaultDef861);  
+            stream_BracketL.add(BracketL24);
 
 
-            Default27=(Token)match(input,Default,FOLLOW_Default_in_defaultDef839);  
-            stream_Default.add(Default27);
+            Default25=(Token)match(input,Default,FOLLOW_Default_in_defaultDef863);  
+            stream_Default.add(Default25);
 
 
-            Equals28=(Token)match(input,Equals,FOLLOW_Equals_in_defaultDef841);  
-            stream_Equals.add(Equals28);
+            Equals26=(Token)match(input,Equals,FOLLOW_Equals_in_defaultDef865);  
+            stream_Equals.add(Equals26);
 
 
-            pushFollow(FOLLOW_idDef_in_defaultDef845);
+            pushFollow(FOLLOW_idDef_in_defaultDef869);
             id=idDef(Identity);
 
             state._fsp--;
 
             stream_idDef.add(id.getTree());
 
-            BracketR29=(Token)match(input,BracketR,FOLLOW_BracketR_in_defaultDef848);  
-            stream_BracketR.add(BracketR29);
+            BracketR27=(Token)match(input,BracketR,FOLLOW_BracketR_in_defaultDef872);  
+            stream_BracketR.add(BracketR27);
 
 
             // AST REWRITE
@@ -1603,9 +1539,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 87:13: -> ^( $id)
+            // 93:13: -> ^( $id)
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:88:13: ^( $id)
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:94:13: ^( $id)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_id.nextNode(), root_1);
@@ -1648,7 +1584,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "enumDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:91:1: enumDef : Enum id= idDef[Identity] BraceL ( enumFieldDef )* BraceR -> ^( $id ( enumFieldDef )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:97:1: enumDef : Enum id= idDef[Identity] BraceL ( enumFieldDef )* BraceR -> ^( $id ( enumFieldDef )* ) ;
     public final ExprParser.enumDef_return enumDef() throws RecognitionException {
         ExprParser.enumDef_return retval = new ExprParser.enumDef_return();
         retval.start = input.LT(1);
@@ -1656,62 +1592,62 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token Enum30=null;
-        Token BraceL31=null;
-        Token BraceR33=null;
+        Token Enum28=null;
+        Token BraceL29=null;
+        Token BraceR31=null;
         ExprParser.idDef_return id =null;
 
-        ExprParser.enumFieldDef_return enumFieldDef32 =null;
+        ExprParser.enumFieldDef_return enumFieldDef30 =null;
 
 
-        Object Enum30_tree=null;
-        Object BraceL31_tree=null;
-        Object BraceR33_tree=null;
+        Object Enum28_tree=null;
+        Object BraceL29_tree=null;
+        Object BraceR31_tree=null;
         RewriteRuleTokenStream stream_BraceR=new RewriteRuleTokenStream(adaptor,"token BraceR");
         RewriteRuleTokenStream stream_Enum=new RewriteRuleTokenStream(adaptor,"token Enum");
         RewriteRuleTokenStream stream_BraceL=new RewriteRuleTokenStream(adaptor,"token BraceL");
         RewriteRuleSubtreeStream stream_enumFieldDef=new RewriteRuleSubtreeStream(adaptor,"rule enumFieldDef");
         RewriteRuleSubtreeStream stream_idDef=new RewriteRuleSubtreeStream(adaptor,"rule idDef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:91:9: ( Enum id= idDef[Identity] BraceL ( enumFieldDef )* BraceR -> ^( $id ( enumFieldDef )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:92:9: Enum id= idDef[Identity] BraceL ( enumFieldDef )* BraceR
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:97:9: ( Enum id= idDef[Identity] BraceL ( enumFieldDef )* BraceR -> ^( $id ( enumFieldDef )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:98:9: Enum id= idDef[Identity] BraceL ( enumFieldDef )* BraceR
             {
-            Enum30=(Token)match(input,Enum,FOLLOW_Enum_in_enumDef921);  
-            stream_Enum.add(Enum30);
+            Enum28=(Token)match(input,Enum,FOLLOW_Enum_in_enumDef945);  
+            stream_Enum.add(Enum28);
 
 
-            pushFollow(FOLLOW_idDef_in_enumDef925);
+            pushFollow(FOLLOW_idDef_in_enumDef949);
             id=idDef(Identity);
 
             state._fsp--;
 
             stream_idDef.add(id.getTree());
 
-            BraceL31=(Token)match(input,BraceL,FOLLOW_BraceL_in_enumDef928);  
-            stream_BraceL.add(BraceL31);
+            BraceL29=(Token)match(input,BraceL,FOLLOW_BraceL_in_enumDef952);  
+            stream_BraceL.add(BraceL29);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:92:40: ( enumFieldDef )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:98:40: ( enumFieldDef )*
             loop11:
             do {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==Attribute||LA11_0==Default||LA11_0==Enum||(LA11_0 >= Identity && LA11_0 <= Import)||LA11_0==Message||LA11_0==Option||LA11_0==Package||LA11_0==Type) ) {
+                if ( (LA11_0==Default||LA11_0==Enum||(LA11_0 >= Identity && LA11_0 <= Import)||LA11_0==Message||LA11_0==Option||LA11_0==Package) ) {
                     alt11=1;
                 }
 
 
                 switch (alt11) {
             	case 1 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:92:40: enumFieldDef
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:98:40: enumFieldDef
             	    {
-            	    pushFollow(FOLLOW_enumFieldDef_in_enumDef930);
-            	    enumFieldDef32=enumFieldDef();
+            	    pushFollow(FOLLOW_enumFieldDef_in_enumDef954);
+            	    enumFieldDef30=enumFieldDef();
 
             	    state._fsp--;
 
-            	    stream_enumFieldDef.add(enumFieldDef32.getTree());
+            	    stream_enumFieldDef.add(enumFieldDef30.getTree());
 
             	    }
             	    break;
@@ -1722,8 +1658,8 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            BraceR33=(Token)match(input,BraceR,FOLLOW_BraceR_in_enumDef933);  
-            stream_BraceR.add(BraceR33);
+            BraceR31=(Token)match(input,BraceR,FOLLOW_BraceR_in_enumDef957);  
+            stream_BraceR.add(BraceR31);
 
 
             // AST REWRITE
@@ -1738,14 +1674,14 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 93:9: -> ^( $id ( enumFieldDef )* )
+            // 99:9: -> ^( $id ( enumFieldDef )* )
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:94:9: ^( $id ( enumFieldDef )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:100:9: ^( $id ( enumFieldDef )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_id.nextNode(), root_1);
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:94:15: ( enumFieldDef )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:100:15: ( enumFieldDef )*
                 while ( stream_enumFieldDef.hasNext() ) {
                     adaptor.addChild(root_1, stream_enumFieldDef.nextTree());
 
@@ -1790,7 +1726,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "enumFieldDef"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:97:1: enumFieldDef : id= idDef[Identity] Equals Number ( Semicolon )? ( Comment )* -> ^( $id Number ( Comment )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:103:1: enumFieldDef : id= idDef[Name] Equals index= Number ( Semicolon )? ( Comment )* -> ^( $id $index ( Comment )* ) ;
     public final ExprParser.enumFieldDef_return enumFieldDef() throws RecognitionException {
         ExprParser.enumFieldDef_return retval = new ExprParser.enumFieldDef_return();
         retval.start = input.LT(1);
@@ -1798,42 +1734,42 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token Equals34=null;
-        Token Number35=null;
-        Token Semicolon36=null;
-        Token Comment37=null;
+        Token index=null;
+        Token Equals32=null;
+        Token Semicolon33=null;
+        Token Comment34=null;
         ExprParser.idDef_return id =null;
 
 
-        Object Equals34_tree=null;
-        Object Number35_tree=null;
-        Object Semicolon36_tree=null;
-        Object Comment37_tree=null;
+        Object index_tree=null;
+        Object Equals32_tree=null;
+        Object Semicolon33_tree=null;
+        Object Comment34_tree=null;
         RewriteRuleTokenStream stream_Number=new RewriteRuleTokenStream(adaptor,"token Number");
         RewriteRuleTokenStream stream_Semicolon=new RewriteRuleTokenStream(adaptor,"token Semicolon");
         RewriteRuleTokenStream stream_Comment=new RewriteRuleTokenStream(adaptor,"token Comment");
         RewriteRuleTokenStream stream_Equals=new RewriteRuleTokenStream(adaptor,"token Equals");
         RewriteRuleSubtreeStream stream_idDef=new RewriteRuleSubtreeStream(adaptor,"rule idDef");
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:97:13: (id= idDef[Identity] Equals Number ( Semicolon )? ( Comment )* -> ^( $id Number ( Comment )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:98:13: id= idDef[Identity] Equals Number ( Semicolon )? ( Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:103:13: (id= idDef[Name] Equals index= Number ( Semicolon )? ( Comment )* -> ^( $id $index ( Comment )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:104:13: id= idDef[Name] Equals index= Number ( Semicolon )? ( Comment )*
             {
-            pushFollow(FOLLOW_idDef_in_enumFieldDef998);
-            id=idDef(Identity);
+            pushFollow(FOLLOW_idDef_in_enumFieldDef1022);
+            id=idDef(Name);
 
             state._fsp--;
 
             stream_idDef.add(id.getTree());
 
-            Equals34=(Token)match(input,Equals,FOLLOW_Equals_in_enumFieldDef1001);  
-            stream_Equals.add(Equals34);
+            Equals32=(Token)match(input,Equals,FOLLOW_Equals_in_enumFieldDef1025);  
+            stream_Equals.add(Equals32);
 
 
-            Number35=(Token)match(input,Number,FOLLOW_Number_in_enumFieldDef1003);  
-            stream_Number.add(Number35);
+            index=(Token)match(input,Number,FOLLOW_Number_in_enumFieldDef1029);  
+            stream_Number.add(index);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:98:46: ( Semicolon )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:104:48: ( Semicolon )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1842,10 +1778,10 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt12) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:98:46: Semicolon
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:104:48: Semicolon
                     {
-                    Semicolon36=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_enumFieldDef1005);  
-                    stream_Semicolon.add(Semicolon36);
+                    Semicolon33=(Token)match(input,Semicolon,FOLLOW_Semicolon_in_enumFieldDef1031);  
+                    stream_Semicolon.add(Semicolon33);
 
 
                     }
@@ -1854,7 +1790,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:98:57: ( Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:104:59: ( Comment )*
             loop13:
             do {
                 int alt13=2;
@@ -1867,10 +1803,10 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt13) {
             	case 1 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:98:57: Comment
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:104:59: Comment
             	    {
-            	    Comment37=(Token)match(input,Comment,FOLLOW_Comment_in_enumFieldDef1008);  
-            	    stream_Comment.add(Comment37);
+            	    Comment34=(Token)match(input,Comment,FOLLOW_Comment_in_enumFieldDef1034);  
+            	    stream_Comment.add(Comment34);
 
 
             	    }
@@ -1882,30 +1818,31 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
+            index.setType(Index);
+
             // AST REWRITE
-            // elements: Number, Comment, id
-            // token labels: 
+            // elements: index, id, Comment
+            // token labels: index
             // rule labels: id, retval
             // token list labels: 
             // rule list labels: 
             // wildcard labels: 
             retval.tree = root_0;
+            RewriteRuleTokenStream stream_index=new RewriteRuleTokenStream(adaptor,"token index",index);
             RewriteRuleSubtreeStream stream_id=new RewriteRuleSubtreeStream(adaptor,"rule id",id!=null?id.tree:null);
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 99:13: -> ^( $id Number ( Comment )* )
+            // 106:13: -> ^( $id $index ( Comment )* )
             {
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:100:13: ^( $id Number ( Comment )* )
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:107:13: ^( $id $index ( Comment )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(stream_id.nextNode(), root_1);
 
-                adaptor.addChild(root_1, 
-                stream_Number.nextNode()
-                );
+                adaptor.addChild(root_1, stream_index.nextNode());
 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\Expr.g:100:26: ( Comment )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\Expr.g:107:26: ( Comment )*
                 while ( stream_Comment.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_Comment.nextNode()
@@ -1949,69 +1886,65 @@ public TreeAdaptor getTreeAdaptor() {
 
  
 
-    public static final BitSet FOLLOW_packageDef_in_proto98 = new BitSet(new long[]{0x0000000004944402L});
-    public static final BitSet FOLLOW_optionDef_in_proto100 = new BitSet(new long[]{0x0000000004944402L});
-    public static final BitSet FOLLOW_importDef_in_proto102 = new BitSet(new long[]{0x0000000004944402L});
-    public static final BitSet FOLLOW_messageDef_in_proto104 = new BitSet(new long[]{0x0000000004944402L});
-    public static final BitSet FOLLOW_enumDef_in_proto106 = new BitSet(new long[]{0x0000000004944402L});
-    public static final BitSet FOLLOW_Comment_in_proto108 = new BitSet(new long[]{0x0000000004944402L});
-    public static final BitSet FOLLOW_Package_in_classRef191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Option_in_classRef197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Import_in_classRef203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Message_in_classRef209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Enum_in_classRef215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Default_in_classRef221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Attribute_in_classRef227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Type_in_classRef233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identity_in_classRef239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ClassPath_in_classRef245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Package_in_idDef277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Option_in_idDef283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Import_in_idDef289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Message_in_idDef295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Enum_in_idDef301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Default_in_idDef307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Attribute_in_idDef313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Type_in_idDef319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identity_in_idDef325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Package_in_packageDef368 = new BitSet(new long[]{0x0000000104964A10L});
-    public static final BitSet FOLLOW_classRef_in_packageDef372 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_Semicolon_in_packageDef375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Option_in_optionDef444 = new BitSet(new long[]{0x0000000104964810L});
-    public static final BitSet FOLLOW_idDef_in_optionDef448 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_Equals_in_optionDef451 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_Quotation_in_optionDef453 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_Semicolon_in_optionDef455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Import_in_importDef538 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_Quotation_in_importDef540 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_Semicolon_in_importDef542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Message_in_messageDef609 = new BitSet(new long[]{0x0000000104964810L});
-    public static final BitSet FOLLOW_idDef_in_messageDef613 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_BraceL_in_messageDef616 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_messageFieldDef_in_messageDef618 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_BraceR_in_messageDef621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Attribute_in_messageFieldDef707 = new BitSet(new long[]{0x0000000104964A10L});
-    public static final BitSet FOLLOW_classRef_in_messageFieldDef711 = new BitSet(new long[]{0x0000000104964810L});
-    public static final BitSet FOLLOW_idDef_in_messageFieldDef716 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_Equals_in_messageFieldDef719 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_Number_in_messageFieldDef721 = new BitSet(new long[]{0x0000000040000482L});
-    public static final BitSet FOLLOW_defaultDef_in_messageFieldDef723 = new BitSet(new long[]{0x0000000040000402L});
-    public static final BitSet FOLLOW_Semicolon_in_messageFieldDef726 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_Comment_in_messageFieldDef729 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_BracketL_in_defaultDef837 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_Default_in_defaultDef839 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_Equals_in_defaultDef841 = new BitSet(new long[]{0x0000000104964810L});
-    public static final BitSet FOLLOW_idDef_in_defaultDef845 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_BracketR_in_defaultDef848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Enum_in_enumDef921 = new BitSet(new long[]{0x0000000104964810L});
-    public static final BitSet FOLLOW_idDef_in_enumDef925 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_BraceL_in_enumDef928 = new BitSet(new long[]{0x0000000104964850L});
-    public static final BitSet FOLLOW_enumFieldDef_in_enumDef930 = new BitSet(new long[]{0x0000000104964850L});
-    public static final BitSet FOLLOW_BraceR_in_enumDef933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_idDef_in_enumFieldDef998 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_Equals_in_enumFieldDef1001 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_Number_in_enumFieldDef1003 = new BitSet(new long[]{0x0000000040000402L});
-    public static final BitSet FOLLOW_Semicolon_in_enumFieldDef1005 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_Comment_in_enumFieldDef1008 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_packageDef_in_proto121 = new BitSet(new long[]{0x0000000012244402L});
+    public static final BitSet FOLLOW_optionDef_in_proto123 = new BitSet(new long[]{0x0000000012244402L});
+    public static final BitSet FOLLOW_importDef_in_proto125 = new BitSet(new long[]{0x0000000012244402L});
+    public static final BitSet FOLLOW_messageDef_in_proto127 = new BitSet(new long[]{0x0000000012244402L});
+    public static final BitSet FOLLOW_enumDef_in_proto129 = new BitSet(new long[]{0x0000000012244402L});
+    public static final BitSet FOLLOW_Comment_in_proto131 = new BitSet(new long[]{0x0000000012244402L});
+    public static final BitSet FOLLOW_Package_in_classRef214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Option_in_classRef220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Import_in_classRef226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Message_in_classRef232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Enum_in_classRef238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Default_in_classRef244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identity_in_classRef250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ClassPath_in_classRef256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Package_in_idDef288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Option_in_idDef294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Import_in_idDef300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Message_in_idDef306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Enum_in_idDef312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Default_in_idDef318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identity_in_idDef324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Package_in_packageDef367 = new BitSet(new long[]{0x0000000012264A00L});
+    public static final BitSet FOLLOW_classRef_in_packageDef371 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_Semicolon_in_packageDef374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Option_in_optionDef443 = new BitSet(new long[]{0x0000000012264800L});
+    public static final BitSet FOLLOW_idDef_in_optionDef447 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_Equals_in_optionDef450 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_Quotation_in_optionDef452 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_Semicolon_in_optionDef454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Import_in_importDef537 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_Quotation_in_importDef539 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_Semicolon_in_importDef541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Message_in_messageDef608 = new BitSet(new long[]{0x0000000012264800L});
+    public static final BitSet FOLLOW_idDef_in_messageDef612 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_BraceL_in_messageDef615 = new BitSet(new long[]{0x0000000012264840L});
+    public static final BitSet FOLLOW_messageFieldDef_in_messageDef617 = new BitSet(new long[]{0x0000000012264840L});
+    public static final BitSet FOLLOW_BraceR_in_messageDef620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_idDef_in_messageFieldDef708 = new BitSet(new long[]{0x0000000012264A00L});
+    public static final BitSet FOLLOW_classRef_in_messageFieldDef713 = new BitSet(new long[]{0x0000000012264800L});
+    public static final BitSet FOLLOW_idDef_in_messageFieldDef718 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_Equals_in_messageFieldDef721 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_Number_in_messageFieldDef725 = new BitSet(new long[]{0x0000000100000482L});
+    public static final BitSet FOLLOW_defaultDef_in_messageFieldDef727 = new BitSet(new long[]{0x0000000100000402L});
+    public static final BitSet FOLLOW_Semicolon_in_messageFieldDef730 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_Comment_in_messageFieldDef733 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_BracketL_in_defaultDef861 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_Default_in_defaultDef863 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_Equals_in_defaultDef865 = new BitSet(new long[]{0x0000000012264800L});
+    public static final BitSet FOLLOW_idDef_in_defaultDef869 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_BracketR_in_defaultDef872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Enum_in_enumDef945 = new BitSet(new long[]{0x0000000012264800L});
+    public static final BitSet FOLLOW_idDef_in_enumDef949 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_BraceL_in_enumDef952 = new BitSet(new long[]{0x0000000012264840L});
+    public static final BitSet FOLLOW_enumFieldDef_in_enumDef954 = new BitSet(new long[]{0x0000000012264840L});
+    public static final BitSet FOLLOW_BraceR_in_enumDef957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_idDef_in_enumFieldDef1022 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_Equals_in_enumFieldDef1025 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_Number_in_enumFieldDef1029 = new BitSet(new long[]{0x0000000100000402L});
+    public static final BitSet FOLLOW_Semicolon_in_enumFieldDef1031 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_Comment_in_enumFieldDef1034 = new BitSet(new long[]{0x0000000000000402L});
 
 }

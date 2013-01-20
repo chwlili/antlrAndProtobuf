@@ -1,4 +1,4 @@
-// $ANTLR 3.4 G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g 2013-01-19 13:33:09
+// $ANTLR 3.4 E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g 2013-01-20 08:44:01
 
 package org.chw.proto;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class ExprWalk extends TreeParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "Attribute", "BraceL", "BraceR", "BracketL", "BracketR", "ClassPath", "Comment", "Default", "DefaultValue", "Dot", "Enum", "EnumList", "Equals", "Identity", "Import", "ImportList", "Message", "MessageList", "Number", "Option", "OptionList", "Other", "Package", "PackageList", "Proto", "Quotation", "Semicolon", "Space", "Type"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "Attribute", "BraceL", "BraceR", "BracketL", "BracketR", "ClassPath", "Comment", "Default", "DefaultValue", "Dot", "Enum", "EnumList", "Equals", "Identity", "Import", "ImportList", "Index", "Message", "MessageList", "Name", "Number", "Option", "OptionList", "Other", "Package", "PackageList", "Proto", "Quotation", "Semicolon", "Space", "Type"
     };
 
     public static final int EOF=-1;
@@ -33,19 +33,21 @@ public class ExprWalk extends TreeParser {
     public static final int Identity=17;
     public static final int Import=18;
     public static final int ImportList=19;
-    public static final int Message=20;
-    public static final int MessageList=21;
-    public static final int Number=22;
-    public static final int Option=23;
-    public static final int OptionList=24;
-    public static final int Other=25;
-    public static final int Package=26;
-    public static final int PackageList=27;
-    public static final int Proto=28;
-    public static final int Quotation=29;
-    public static final int Semicolon=30;
-    public static final int Space=31;
-    public static final int Type=32;
+    public static final int Index=20;
+    public static final int Message=21;
+    public static final int MessageList=22;
+    public static final int Name=23;
+    public static final int Number=24;
+    public static final int Option=25;
+    public static final int OptionList=26;
+    public static final int Other=27;
+    public static final int Package=28;
+    public static final int PackageList=29;
+    public static final int Proto=30;
+    public static final int Quotation=31;
+    public static final int Semicolon=32;
+    public static final int Space=33;
+    public static final int Type=34;
 
     // delegates
     public TreeParser[] getDelegates() {
@@ -71,7 +73,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return ExprWalk.tokenNames; }
-    public String getGrammarFileName() { return "G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g"; }
+    public String getGrammarFileName() { return "E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g"; }
 
 
     public static class proto_return extends TreeRuleReturnScope {
@@ -81,7 +83,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "proto"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:22:1: proto : ^( Proto ^( PackageList ( packInfo )* ) ^( OptionList ( optionInfo )* ) ^( ImportList ( importInfo )* ) ^( MessageList ( messageInfo )* ) ^( EnumList ( enumInfo )* ) ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:22:1: proto : ^( Proto ^( PackageList ( packInfo )* ) ^( OptionList ( optionInfo )* ) ^( ImportList ( importInfo )* ) ^( MessageList ( messageInfo )* ) ^( EnumList ( enumInfo )* ) ) ;
     public final ExprWalk.proto_return proto() throws RecognitionException {
         ExprWalk.proto_return retval = new ExprWalk.proto_return();
         retval.start = input.LT(1);
@@ -117,8 +119,8 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree EnumList10_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:22:7: ( ^( Proto ^( PackageList ( packInfo )* ) ^( OptionList ( optionInfo )* ) ^( ImportList ( importInfo )* ) ^( MessageList ( messageInfo )* ) ^( EnumList ( enumInfo )* ) ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:7: ^( Proto ^( PackageList ( packInfo )* ) ^( OptionList ( optionInfo )* ) ^( ImportList ( importInfo )* ) ^( MessageList ( messageInfo )* ) ^( EnumList ( enumInfo )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:22:7: ( ^( Proto ^( PackageList ( packInfo )* ) ^( OptionList ( optionInfo )* ) ^( ImportList ( importInfo )* ) ^( MessageList ( messageInfo )* ) ^( EnumList ( enumInfo )* ) ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:7: ^( Proto ^( PackageList ( packInfo )* ) ^( OptionList ( optionInfo )* ) ^( ImportList ( importInfo )* ) ^( MessageList ( messageInfo )* ) ^( EnumList ( enumInfo )* ) )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -152,7 +154,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:29: ( packInfo )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:29: ( packInfo )*
                 loop1:
                 do {
                     int alt1=2;
@@ -165,7 +167,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     switch (alt1) {
                 	case 1 :
-                	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:29: packInfo
+                	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:29: packInfo
                 	    {
                 	    _last = (CommonTree)input.LT(1);
                 	    pushFollow(FOLLOW_packInfo_in_proto77);
@@ -207,7 +209,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:53: ( optionInfo )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:53: ( optionInfo )*
                 loop2:
                 do {
                     int alt2=2;
@@ -220,7 +222,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     switch (alt2) {
                 	case 1 :
-                	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:53: optionInfo
+                	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:53: optionInfo
                 	    {
                 	    _last = (CommonTree)input.LT(1);
                 	    pushFollow(FOLLOW_optionInfo_in_proto84);
@@ -262,7 +264,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:79: ( importInfo )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:79: ( importInfo )*
                 loop3:
                 do {
                     int alt3=2;
@@ -275,7 +277,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     switch (alt3) {
                 	case 1 :
-                	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:79: importInfo
+                	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:79: importInfo
                 	    {
                 	    _last = (CommonTree)input.LT(1);
                 	    pushFollow(FOLLOW_importInfo_in_proto91);
@@ -317,7 +319,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:106: ( messageInfo )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:106: ( messageInfo )*
                 loop4:
                 do {
                     int alt4=2;
@@ -330,7 +332,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     switch (alt4) {
                 	case 1 :
-                	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:106: messageInfo
+                	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:106: messageInfo
                 	    {
                 	    _last = (CommonTree)input.LT(1);
                 	    pushFollow(FOLLOW_messageInfo_in_proto98);
@@ -372,7 +374,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:131: ( enumInfo )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:131: ( enumInfo )*
                 loop5:
                 do {
                     int alt5=2;
@@ -385,7 +387,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     switch (alt5) {
                 	case 1 :
-                	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:23:131: enumInfo
+                	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:23:131: enumInfo
                 	    {
                 	    _last = (CommonTree)input.LT(1);
                 	    pushFollow(FOLLOW_enumInfo_in_proto105);
@@ -444,7 +446,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "packInfo"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:26:1: packInfo : ClassPath ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:26:1: packInfo : ClassPath ;
     public final ExprWalk.packInfo_return packInfo() throws RecognitionException {
         ExprWalk.packInfo_return retval = new ExprWalk.packInfo_return();
         retval.start = input.LT(1);
@@ -460,8 +462,8 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree ClassPath12_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:26:10: ( ClassPath )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:26:12: ClassPath
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:26:10: ( ClassPath )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:26:12: ClassPath
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -502,7 +504,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "optionInfo"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:28:1: optionInfo : ^( Identity Quotation ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:28:1: optionInfo : ^( Identity Quotation ) ;
     public final ExprWalk.optionInfo_return optionInfo() throws RecognitionException {
         ExprWalk.optionInfo_return retval = new ExprWalk.optionInfo_return();
         retval.start = input.LT(1);
@@ -520,8 +522,8 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree Quotation14_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:28:12: ( ^( Identity Quotation ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:28:14: ^( Identity Quotation )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:28:12: ( ^( Identity Quotation ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:28:14: ^( Identity Quotation )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -582,7 +584,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "importInfo"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:30:1: importInfo : Quotation ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:30:1: importInfo : Quotation ;
     public final ExprWalk.importInfo_return importInfo() throws RecognitionException {
         ExprWalk.importInfo_return retval = new ExprWalk.importInfo_return();
         retval.start = input.LT(1);
@@ -598,8 +600,8 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree Quotation15_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:30:13: ( Quotation )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:30:15: Quotation
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:30:13: ( Quotation )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:30:15: Quotation
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -640,7 +642,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "messageInfo"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:32:1: messageInfo : ^( Identity ( messageFieldInfo )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:32:1: messageInfo : ^( Identity ( messageFieldInfo )* ) ;
     public final ExprWalk.messageInfo_return messageInfo() throws RecognitionException {
         ExprWalk.messageInfo_return retval = new ExprWalk.messageInfo_return();
         retval.start = input.LT(1);
@@ -658,8 +660,8 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree Identity16_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:32:13: ( ^( Identity ( messageFieldInfo )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:32:15: ^( Identity ( messageFieldInfo )* )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:32:13: ( ^( Identity ( messageFieldInfo )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:32:15: ^( Identity ( messageFieldInfo )* )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -681,20 +683,20 @@ public TreeAdaptor getTreeAdaptor() {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:32:71: ( messageFieldInfo )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:32:71: ( messageFieldInfo )*
                 loop6:
                 do {
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
-                    if ( (LA6_0==Identity) ) {
+                    if ( (LA6_0==Name) ) {
                         alt6=1;
                     }
 
 
                     switch (alt6) {
                 	case 1 :
-                	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:32:71: messageFieldInfo
+                	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:32:71: messageFieldInfo
                 	    {
                 	    _last = (CommonTree)input.LT(1);
                 	    pushFollow(FOLLOW_messageFieldInfo_in_messageInfo163);
@@ -747,7 +749,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "messageFieldInfo"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:34:1: messageFieldInfo : ^(name= Identity Attribute Type index= Number ( DefaultValue )? ( Comment )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:34:1: messageFieldInfo : ^(name= Name Attribute Type index= Index ( DefaultValue )? ( Comment )* ) ;
     public final ExprWalk.messageFieldInfo_return messageFieldInfo() throws RecognitionException {
         ExprWalk.messageFieldInfo_return retval = new ExprWalk.messageFieldInfo_return();
         retval.start = input.LT(1);
@@ -773,8 +775,8 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree Comment21_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:34:18: ( ^(name= Identity Attribute Type index= Number ( DefaultValue )? ( Comment )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:35:19: ^(name= Identity Attribute Type index= Number ( DefaultValue )? ( Comment )* )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:34:18: ( ^(name= Name Attribute Type index= Index ( DefaultValue )? ( Comment )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:35:19: ^(name= Name Attribute Type index= Index ( DefaultValue )? ( Comment )* )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -785,7 +787,7 @@ public TreeAdaptor getTreeAdaptor() {
             CommonTree _first_1 = null;
             CommonTree root_1 = (CommonTree)adaptor.nil();
             _last = (CommonTree)input.LT(1);
-            name=(CommonTree)match(input,Identity,FOLLOW_Identity_in_messageFieldInfo195); 
+            name=(CommonTree)match(input,Name,FOLLOW_Name_in_messageFieldInfo195); 
             name_tree = (CommonTree)adaptor.dupNode(name);
 
 
@@ -810,14 +812,14 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             _last = (CommonTree)input.LT(1);
-            index=(CommonTree)match(input,Number,FOLLOW_Number_in_messageFieldInfo203); 
+            index=(CommonTree)match(input,Index,FOLLOW_Index_in_messageFieldInfo203); 
             index_tree = (CommonTree)adaptor.dupNode(index);
 
 
             adaptor.addChild(root_1, index_tree);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:35:63: ( DefaultValue )?
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:35:58: ( DefaultValue )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -826,7 +828,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt7) {
                 case 1 :
-                    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:35:63: DefaultValue
+                    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:35:58: DefaultValue
                     {
                     _last = (CommonTree)input.LT(1);
                     DefaultValue20=(CommonTree)match(input,DefaultValue,FOLLOW_DefaultValue_in_messageFieldInfo205); 
@@ -842,7 +844,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:35:77: ( Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:35:72: ( Comment )*
             loop8:
             do {
                 int alt8=2;
@@ -855,7 +857,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt8) {
             	case 1 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:35:77: Comment
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:35:72: Comment
             	    {
             	    _last = (CommonTree)input.LT(1);
             	    Comment21=(CommonTree)match(input,Comment,FOLLOW_Comment_in_messageFieldInfo208); 
@@ -906,7 +908,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "enumInfo"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:38:1: enumInfo : ^( Identity ( enumFieldInfo )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:38:1: enumInfo : ^( Identity ( enumFieldInfo )* ) ;
     public final ExprWalk.enumInfo_return enumInfo() throws RecognitionException {
         ExprWalk.enumInfo_return retval = new ExprWalk.enumInfo_return();
         retval.start = input.LT(1);
@@ -924,8 +926,8 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree Identity22_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:38:10: ( ^( Identity ( enumFieldInfo )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:38:12: ^( Identity ( enumFieldInfo )* )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:38:10: ( ^( Identity ( enumFieldInfo )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:38:12: ^( Identity ( enumFieldInfo )* )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -945,20 +947,20 @@ public TreeAdaptor getTreeAdaptor() {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:38:23: ( enumFieldInfo )*
+                // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:38:23: ( enumFieldInfo )*
                 loop9:
                 do {
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
-                    if ( (LA9_0==Identity) ) {
+                    if ( (LA9_0==Name) ) {
                         alt9=1;
                     }
 
 
                     switch (alt9) {
                 	case 1 :
-                	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:38:23: enumFieldInfo
+                	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:38:23: enumFieldInfo
                 	    {
                 	    _last = (CommonTree)input.LT(1);
                 	    pushFollow(FOLLOW_enumFieldInfo_in_enumInfo240);
@@ -1011,7 +1013,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "enumFieldInfo"
-    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:40:1: enumFieldInfo : ^( Identity Number ( Comment )* ) ;
+    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:40:1: enumFieldInfo : ^( Name Index ( Comment )* ) ;
     public final ExprWalk.enumFieldInfo_return enumFieldInfo() throws RecognitionException {
         ExprWalk.enumFieldInfo_return retval = new ExprWalk.enumFieldInfo_return();
         retval.start = input.LT(1);
@@ -1022,17 +1024,17 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree _first_0 = null;
         CommonTree _last = null;
 
-        CommonTree Identity24=null;
-        CommonTree Number25=null;
+        CommonTree Name24=null;
+        CommonTree Index25=null;
         CommonTree Comment26=null;
 
-        CommonTree Identity24_tree=null;
-        CommonTree Number25_tree=null;
+        CommonTree Name24_tree=null;
+        CommonTree Index25_tree=null;
         CommonTree Comment26_tree=null;
 
         try {
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:40:15: ( ^( Identity Number ( Comment )* ) )
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:40:17: ^( Identity Number ( Comment )* )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:40:15: ( ^( Name Index ( Comment )* ) )
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:40:17: ^( Name Index ( Comment )* )
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -1043,23 +1045,23 @@ public TreeAdaptor getTreeAdaptor() {
             CommonTree _first_1 = null;
             CommonTree root_1 = (CommonTree)adaptor.nil();
             _last = (CommonTree)input.LT(1);
-            Identity24=(CommonTree)match(input,Identity,FOLLOW_Identity_in_enumFieldInfo251); 
-            Identity24_tree = (CommonTree)adaptor.dupNode(Identity24);
+            Name24=(CommonTree)match(input,Name,FOLLOW_Name_in_enumFieldInfo251); 
+            Name24_tree = (CommonTree)adaptor.dupNode(Name24);
 
 
-            root_1 = (CommonTree)adaptor.becomeRoot(Identity24_tree, root_1);
+            root_1 = (CommonTree)adaptor.becomeRoot(Name24_tree, root_1);
 
 
             match(input, Token.DOWN, null); 
             _last = (CommonTree)input.LT(1);
-            Number25=(CommonTree)match(input,Number,FOLLOW_Number_in_enumFieldInfo253); 
-            Number25_tree = (CommonTree)adaptor.dupNode(Number25);
+            Index25=(CommonTree)match(input,Index,FOLLOW_Index_in_enumFieldInfo253); 
+            Index25_tree = (CommonTree)adaptor.dupNode(Index25);
 
 
-            adaptor.addChild(root_1, Number25_tree);
+            adaptor.addChild(root_1, Index25_tree);
 
 
-            // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:40:35: ( Comment )*
+            // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:40:30: ( Comment )*
             loop10:
             do {
                 int alt10=2;
@@ -1072,7 +1074,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt10) {
             	case 1 :
-            	    // G:\\MyWork\\Dev\\eclipse_project\\JfaceProject\\src1\\org\\chw\\proto\\ExprWalk.g:40:35: Comment
+            	    // E:\\gitTest\\antlrAndProtobuf\\org\\chw\\proto\\ExprWalk.g:40:30: Comment
             	    {
             	    _last = (CommonTree)input.LT(1);
             	    Comment26=(CommonTree)match(input,Comment,FOLLOW_Comment_in_enumFieldInfo255); 
@@ -1126,7 +1128,7 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_OptionList_in_proto82 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_optionInfo_in_proto84 = new BitSet(new long[]{0x0000000000020008L});
     public static final BitSet FOLLOW_ImportList_in_proto89 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_importInfo_in_proto91 = new BitSet(new long[]{0x0000000020000008L});
+    public static final BitSet FOLLOW_importInfo_in_proto91 = new BitSet(new long[]{0x0000000080000008L});
     public static final BitSet FOLLOW_MessageList_in_proto96 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_messageInfo_in_proto98 = new BitSet(new long[]{0x0000000000020008L});
     public static final BitSet FOLLOW_EnumList_in_proto103 = new BitSet(new long[]{0x0000000000000004L});
@@ -1136,17 +1138,17 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_Quotation_in_optionInfo137 = new BitSet(new long[]{0x0000000000000008L});
     public static final BitSet FOLLOW_Quotation_in_importInfo148 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_Identity_in_messageInfo160 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_messageFieldInfo_in_messageInfo163 = new BitSet(new long[]{0x0000000000020008L});
-    public static final BitSet FOLLOW_Identity_in_messageFieldInfo195 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_Attribute_in_messageFieldInfo197 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_Type_in_messageFieldInfo199 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_Number_in_messageFieldInfo203 = new BitSet(new long[]{0x0000000000001408L});
+    public static final BitSet FOLLOW_messageFieldInfo_in_messageInfo163 = new BitSet(new long[]{0x0000000000800008L});
+    public static final BitSet FOLLOW_Name_in_messageFieldInfo195 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_Attribute_in_messageFieldInfo197 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_Type_in_messageFieldInfo199 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_Index_in_messageFieldInfo203 = new BitSet(new long[]{0x0000000000001408L});
     public static final BitSet FOLLOW_DefaultValue_in_messageFieldInfo205 = new BitSet(new long[]{0x0000000000000408L});
     public static final BitSet FOLLOW_Comment_in_messageFieldInfo208 = new BitSet(new long[]{0x0000000000000408L});
     public static final BitSet FOLLOW_Identity_in_enumInfo238 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_enumFieldInfo_in_enumInfo240 = new BitSet(new long[]{0x0000000000020008L});
-    public static final BitSet FOLLOW_Identity_in_enumFieldInfo251 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_Number_in_enumFieldInfo253 = new BitSet(new long[]{0x0000000000000408L});
+    public static final BitSet FOLLOW_enumFieldInfo_in_enumInfo240 = new BitSet(new long[]{0x0000000000800008L});
+    public static final BitSet FOLLOW_Name_in_enumFieldInfo251 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_Index_in_enumFieldInfo253 = new BitSet(new long[]{0x0000000000000408L});
     public static final BitSet FOLLOW_Comment_in_enumFieldInfo255 = new BitSet(new long[]{0x0000000000000408L});
 
 }

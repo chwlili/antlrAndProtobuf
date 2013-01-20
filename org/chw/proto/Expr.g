@@ -14,6 +14,11 @@ tokens
   MessageList;
   EnumList;
   DefaultValue;
+  
+  Attribute;
+  Type;
+  Name;
+  Index;
 }
 
 @parser::header {
@@ -40,13 +45,13 @@ proto :
 
 classRef[int type]
     :
-    (id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Attribute | id=Type | id=Identity | id=ClassPath)
+    (id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Identity | id=ClassPath)
     {$id.setType(type);}
     ;
 
 idDef[int type]
     :
-    (id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Attribute | id=Type | id=Identity)
+    (id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Identity)
     {$id.setType(type);}
     ;
     
@@ -77,9 +82,10 @@ messageDef  :
             ; 
              
 messageFieldDef : 
-                Attribute type=classRef[Type] id=idDef[Identity] Equals Number defaultDef? Semicolon? Comment*
+                att=idDef[Attribute] type=classRef[Type] name=idDef[Name] Equals index=Number defaultDef? Semicolon? Comment*
+                {$index.setType(Index);}
                 ->
-                ^($id Attribute $type Number defaultDef? Comment*)
+                ^($name $att $type $index defaultDef? Comment*)
                 ;
                 
 defaultDef  : 
@@ -95,9 +101,10 @@ enumDef :
         ;
         
 enumFieldDef: 
-            id=idDef[Identity] Equals Number Semicolon? Comment* 
+            id=idDef[Name] Equals index=Number Semicolon? Comment*
+            {$index.setType(Index);} 
             ->
-            ^($id Number Comment*)
+            ^($id $index Comment*)
             ; 
 
 //(id=Package | id=Option | id=Import | id=Message | id=Enum | id=Default | id=Attribute | id=Type | id=Identity | id=ClassPath)
@@ -109,8 +116,8 @@ Message : 'message';
 Enum    : 'enum';
 Default : 'default';
 
-Attribute : 'optional' | 'repeated' | 'required';
-Type      : 'int32' | 'sint32' | 'uint32' | 'int64' | 'sint64' | 'uint64';
+//Attribute : 'optional' | 'repeated' | 'required';
+//Type      : 'int32' | 'sint32' | 'uint32' | 'int64' | 'sint64' | 'uint64';
 Number    : '0'..'9' | '1'..'9' '0'..'9'+;
 Identity  : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 ClassPath : Identity (Dot Identity)*;

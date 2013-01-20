@@ -29,32 +29,42 @@ public class DomContentAssistant implements IContentAssistProcessor
 		//List<String> variables = TreeHelper.getVariables(tree);
 		
 		DomTokenList list=DomManager.getTokenList(viewer.getDocument());
-		CommonToken token=list.getToken(range.x);
 		
-		do
-		{
-			if(token.getType()==ExprLexer.Attribute)
-			{
-				//
-				break;
-			}
-			else
-			{
-				
-			}
-		}
-		while(token.getStartIndex()>0)
+		CommonToken curr=list.getToken(range.x);
+		
+		CommonToken token=curr;
+		while(token.getType()==ExprLexer.Space || token.getType()==ExprLexer.Comment || token.getType()==ExprLexer.Semicolon)
 		{
 			token=list.getToken(token.getStartIndex()-1);
 		}
 		
+		if(token!=null)
+		{
+			List<ICompletionProposal> proposals = new ArrayList<ICompletionProposal>();
+			
+			if(token.getType()==ExprLexer.BraceL || token.getType()==ExprLexer.Index)
+			{
+				proposals.add(new CompletionProposal("required ", range.x, range.y, 9, null, "required", null, null));
+				proposals.add(new CompletionProposal("optional ", range.x, range.y, 9, null, "optional", null, null));
+				proposals.add(new CompletionProposal("repeated ", range.x, range.y, 9, null, "repeated", null, null));
+			}
+			else if(token.getType()==ExprLexer.Attribute)
+			{
+				proposals.add(new CompletionProposal("int32 ", range.x, range.y, 6, null, "int32", null, null));
+				proposals.add(new CompletionProposal("sint32 ", range.x, range.y, 7, null, "sint32", null, null));
+				proposals.add(new CompletionProposal("uint32 ", range.x, range.y, 7, null, "uint32", null, null));
+				proposals.add(new CompletionProposal("int64 ", range.x, range.y, 6, null, "int64", null, null));
+				proposals.add(new CompletionProposal("sint64 ", range.x, range.y, 7, null, "sint64", null, null));
+				proposals.add(new CompletionProposal("uint64 ", range.x, range.y, 7, null, "uint64", null, null));
+				proposals.add(new CompletionProposal("string ", range.x, range.y, 7, null, "string", null, null));
+			}
+			return proposals.toArray(new ICompletionProposal[proposals.size()]);
+		}
+		
+		return null;
 		// create proposals
-		List<ICompletionProposal> proposals = new ArrayList<ICompletionProposal>();
 		//for(String var : variables) {
-			proposals.add(new CompletionProposal("111", range.x, range.y, 3, null, "xx", null, "addtest"));
-			proposals.add(new CompletionProposal("111", range.x, range.y, 3, null, "yy", null, "delooo"));
 		//}
-		return proposals.toArray(new ICompletionProposal[proposals.size()]);
 	}
 
 	@Override
@@ -66,7 +76,7 @@ public class DomContentAssistant implements IContentAssistProcessor
 	@Override
 	public char[] getCompletionProposalAutoActivationCharacters()
 	{
-		return new char[]{' ','\t','\n'};
+		return new char[]{' ','\t','\r','\n'};
 	}
 
 	@Override

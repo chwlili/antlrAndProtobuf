@@ -32,11 +32,11 @@ importInfo  : Quotation {System.out.println("import  "+$Quotation.text);} ;
 messageInfo : ^(Identity{System.out.println("\nmessage:"+$Identity);} messageFieldInfo*);
 
 messageFieldInfo : 
-                  ^(name=Identity Attribute Type index=Number DefaultValue? Comment*)
+                  ^(name=Name Attribute Type index=Index DefaultValue? Comment*)
                   ;
 
 enumInfo : ^(Identity enumFieldInfo*);
 
-enumFieldInfo : ^(Identity Number Comment*);
+enumFieldInfo : ^(Name Index Comment*);
 
 
