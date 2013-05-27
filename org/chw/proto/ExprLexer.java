@@ -21,6 +21,8 @@ public class ExprLexer extends Lexer {
     public static final int Default=11;
     public static final int DefaultValue=12;
     public static final int Dot=13;
+    
+    
     public static final int Enum=14;
     public static final int EnumList=15;
     public static final int Equals=16;
